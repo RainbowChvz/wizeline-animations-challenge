@@ -33,11 +33,6 @@ class SplashFragment : Fragment() {
         super.onResume()
 
         animateLogo()
-
-        lifecycleScope.launch {
-            delay(2000)
-            goToHomeScreen()
-        }
     }
 
     /**
@@ -59,8 +54,11 @@ class SplashFragment : Fragment() {
             scaleY,
             rotate
         ).apply {
-            duration = 2000
+            duration = 3000
             interpolator = BounceInterpolator()
+            doOnEnd {
+                goToHomeScreen()
+            }
             start()
         }
     }

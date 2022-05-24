@@ -12,7 +12,8 @@
         tools:layout="@layout/splash_fragment">
         <action
             android:id="@+id/toMainFragment"
-            app:destination="@id/mainFragment" />
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/transition_splash_to_home" />
     </fragment>
 
     <fragment
