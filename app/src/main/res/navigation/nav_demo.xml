@@ -16,6 +16,8 @@
             app:enterAnim="@anim/transition_splash_to_home" />
     </fragment>
 
+<!-- When user clicks on an item go to next fragment with a custom animation using View.animation-->
+<!-- xml (set on the navigation graph)-->
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.wizeline.academy.animations.ui.home.HomeFragment"
@@ -23,7 +25,8 @@
         tools:layout="@layout/home_fragment">
         <action
             android:id="@+id/toDetailFragment"
-            app:destination="@id/detailFragment" />
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/transition_home_to_detail" />
     </fragment>
 
     <fragment
